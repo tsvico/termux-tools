@@ -7,6 +7,7 @@ if test $choice -eq 1
 		cd
 		#Install common tools
 		pkg install nmap hydra sslscan python python-dev python2 python2-dev curl tsu vim wget git unzip unrar sl clang nodejs php cmatrix tree toilet figlet cowsay w3m htop screenfetch aria2 tmux proot nginx nyancat openssh moon-buggy lua -y
+		apt install vim-python -y
 		#mapscii
 		npm install mapscii -g
 		#Update pip
@@ -43,8 +44,16 @@ if test $choice -eq 1
 		#xsstrike
 		git clone https://github.com/UltimateHackers/XSStrike.git
 		cd XSStrike
-		pip2 install -r requirements.txt
+		pip install -r requirements.txt
 		cd
+		#socialfish
+		git clone https://github.com/UndeadSec/SocialFish.git
+		cd SocialFish
+		pip install -r requirements.txt
+		cd
+		#httrack
+		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
+		sh httrack
 		#ipython
 		pip install ipython
 		#Kuso
@@ -59,6 +68,8 @@ if test $choice -eq 1
 		pip install scrapy
 		pip install demjson tushare colorama
 		pip install pillow
+		pip install future
+		pip install paramiko
 		#Installation Tips
 		toilet -f mono12 -F gay installed
 	elif test $choice -eq 2
@@ -66,6 +77,7 @@ if test $choice -eq 1
 		cd
 		#Install common tools
 		pkg install nmap hydra sslscan python python-dev python2 python2-dev curl tsu vim wget git unzip unrar sl clang nodejs php cmatrix tree toilet figlet cowsay w3m htop screenfetch -y
+		apt install vim-python -y
 		#upgrade
 		apt upgrade -y
 		#Update pip
@@ -94,19 +106,19 @@ if test $choice -eq 1
 		cd WPSeku
 		pip install -r requirements.txt
 		cd
-		#setoolkit
-		git clone https://github.com/Techzindia/setoolkit-for-termux.git
-		cd setoolkit-for-termux/
-		chmod +x setoolkit.sh
-		bash setoolkit.sh
-		mv setoolkit ..
-		cd
-		rm -rf setoolkit-for-termux/
 		#xsstrike
 		git clone https://github.com/UltimateHackers/XSStrike.git
 		cd XSStrike
-		pip2 install -r requirements.txt
+		pip install -r requirements.txt
 		cd
+		#socialfish
+		git clone https://github.com/UndeadSec/SocialFish.git
+		cd SocialFish
+		pip install -r requirements.txt
+		cd
+		#httrack
+		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
+		sh httrack
 	elif test $choice -eq 3
 	then
 		pkg python python-dev python2 python2-dev
@@ -130,6 +142,8 @@ if test $choice -eq 1
 		pip install scrapy
 		pip install demjson tushare colorama
 		pip install pillow
+		pip install future
+		pip install paramiko
 		#Installation Tips
 		toilet -f mono12 -F gay installed
 	else
