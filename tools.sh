@@ -20,40 +20,40 @@ if test $choice -eq 1
 		apt upgrade -y
 		#Install msf
 		wget https://Auxilus.github.io/metasploit.sh
-		bash metasploit.sh
+		bash metasploit.sh &
 		#Install whatportis
-		pip2 install whatportis
+		pip2 install whatportis &
 		#sqlmap
-		git clone htts://github.com/sqlmapproject/sqlmap.git
+		git clone htts://github.com/sqlmapproject/sqlmap.git &
 		#routersploit
-		pip2 install requests
-		git clone https://github.com/reverse-shell/routersploit
+		pip2 install requests &
+		git clone https://github.com/reverse-shell/routersploit &
 		#RED_HAWK
-		git clone https://github.com/Tuhinshubhra/RED_HAWK.git
+		git clone https://github.com/Tuhinshubhra/RED_HAWK.git &
 		#cupp
-		git clone https://github.com/Mebus/cupp.git
+		git clone https://github.com/Mebus/cupp.git &
 		#hash-buster
-		git clone https://github.com/UltimateHackers/Hash-Buster.git
+		git clone https://github.com/UltimateHackers/Hash-Buster.git &
 		#D-TECT
-		git clone https://github.com/shawarkhanethicalhacker/D-TECT.git
+		git clone https://github.com/shawarkhanethicalhacker/D-TECT.gi &t
 		#WPSeku
-		git clone https://github.com/m4ll0k/WPSeku.git
+		git clone https://github.com/m4ll0k/WPSeku.git &
 		cd WPSeku
-		pip install -r requirements.txt
+		pip install -r requirements.txt &
 		cd
 		#xsstrike
 		git clone https://github.com/UltimateHackers/XSStrike.git
 		cd XSStrike
-		pip install -r requirements.txt
+		pip install -r requirements.txt &
 		cd
 		#socialfish
 		git clone https://github.com/UndeadSec/SocialFish.git
 		cd SocialFish
-		pip install -r requirements.txt
+		pip install -r requirements.txt &
 		cd
 		#httrack
 		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
-		sh httrack
+		sh httrack &
 		#ipython
 		pip install ipython
 		#Kuso
@@ -61,12 +61,12 @@ if test $choice -eq 1
 		#Install excellent third party Library
 		#Note: time may be very long
 		echo "time may be very long"
-		LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1
-		LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib pandas jupyter
-		pip install BeautifulSoup4 requests
-		pip install lxml
-		pip install scrapy
-		pip install demjson tushare colorama
+		LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1 &
+		LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib pandas jupyter &
+		pip install BeautifulSoup4 requests &
+		pip install lxml &
+		pip install scrapy &
+		pip install demjson tushare colorama &
 		pip install pillow
 		pip install future
 		pip install paramiko
@@ -85,7 +85,7 @@ if test $choice -eq 1
 		python -m pip install --upgrade pip
 		#Install msf
 		wget https://Auxilus.github.io/metasploit.sh
-		bash metasploit.sh
+		bash metasploit.sh &
 		#Install whatportis
 		pip2 install whatportis
 		#sqlmap
@@ -135,13 +135,13 @@ if test $choice -eq 1
 		#Install excellent third party Library
 		#Note: time may be very long
 		echo "time may be very long"
-		LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1
-		LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib pandas jupyter
-		pip install BeautifulSoup4 requests
-		pip install lxml
-		pip install scrapy
-		pip install demjson tushare colorama
-		pip install pillow
+		LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1 &
+		LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib pandas jupyter &
+		pip install BeautifulSoup4 requests &
+		pip install lxml &
+		pip install scrapy &
+		pip install demjson tushare colorama &
+		pip install pillow &
 		pip install future
 		pip install paramiko
 		#Installation Tips
