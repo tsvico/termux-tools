@@ -121,7 +121,7 @@ if test $choice -eq 1
 		sh httrack
 	elif test $choice -eq 3
 	then
-		pkg python python-dev python2 python2-dev
+		pkg python python-dev python2 python2-dev -y
 		#Update pip
 		python2 -m pip install --upgrade pip
 		python -m pip install --upgrade pip
