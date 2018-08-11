@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "what do you want install？"
-echo -n "(1)all (2)only osmosis test suite (3)only python three party lib"
+echo "你想要安装些什么？"
+echo -n "(1)所有东西(2)只安装渗透测试工具 (3)只安装python和python库"
 read choice
 if test $choice -eq 1
 	then
@@ -121,7 +121,7 @@ if test $choice -eq 1
 		sh httrack
 	elif test $choice -eq 3
 	then
-		pkg python python-dev python2 python2-dev -y
+		pkg install python python-dev python2 python2-dev -y
 		#Update pip
 		python2 -m pip install --upgrade pip
 		python -m pip install --upgrade pip
