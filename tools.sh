@@ -24,7 +24,7 @@ if test $choice -eq 1
 		#Install whatportis
 		pip2 install whatportis &
 		#sqlmap
-		git clone htts://github.com/sqlmapproject/sqlmap.git &
+		git clone htts://github.com/sqlmapproject/sqlmap.git 
 		#routersploit
 		pip2 install requests &
 		git clone https://github.com/reverse-shell/routersploit &
@@ -53,7 +53,9 @@ if test $choice -eq 1
 		cd
 		#httrack
 		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
-		sh httrack &
+		sh httrack
+		#theharvester
+		git clone https://github.com/laramies/theHarvester.git &
 		#ipython
 		pip install ipython
 		#Kuso
@@ -116,6 +118,8 @@ if test $choice -eq 1
 		cd SocialFish
 		pip install -r requirements.txt
 		cd
+		#theharvester
+		git clone https://github.com/laramies/theHarvester.git
 		#httrack
 		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
 		sh httrack
