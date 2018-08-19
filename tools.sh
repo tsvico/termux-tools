@@ -1,155 +1,50 @@
-#!/bin/bash
-echo "你想要安装些什么？"
-echo -n "(1)所有东西(2)只安装渗透测试工具 (3)只安装python和python库"
-read choice
-if test $choice -eq 1
-	then
-		cd
-		#Install common tools
-		pkg install nmap hydra sslscan python python-dev python2 python2-dev curl tsu vim wget git unzip unrar sl clang nodejs php cmatrix tree toilet figlet cowsay w3m htop screenfetch aria2 tmux proot nginx nyancat openssh moon-buggy lua -y
-		apt install vim-python -y
-		#mapscii
-		npm install mapscii -g
-		#Update pip
-		python2 -m pip install --upgrade pip
-		python -m pip install --upgrade pip
-		#Install python dependency Library
-		apt install libxml2 libxml2-dev libxslt libxslt-dev openssl libffi libffi-dev openssl-tool openssl-dev fftw fftw-dev libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config scrypt -y
-		pkg install libcrypt libcrypt-dev ccrypt libgcrypt libgcrypt-dev libjpeg-turbo-dev libllvm-dev openjpeg -y
-		#upgrade
-		apt upgrade -y
-		#Install msf
-		wget https://Auxilus.github.io/metasploit.sh
-		bash metasploit.sh &
-		#Install whatportis
-		pip2 install whatportis &
-		#sqlmap
-		git clone htts://github.com/sqlmapproject/sqlmap.git 
-		#routersploit
-		pip2 install requests &
-		git clone https://github.com/reverse-shell/routersploit &
-		#RED_HAWK
-		git clone https://github.com/Tuhinshubhra/RED_HAWK.git &
-		#cupp
-		git clone https://github.com/Mebus/cupp.git &
-		#hash-buster
-		git clone https://github.com/UltimateHackers/Hash-Buster.git &
-		#D-TECT
-		git clone https://github.com/shawarkhanethicalhacker/D-TECT.gi &t
-		#WPSeku
-		git clone https://github.com/m4ll0k/WPSeku.git &
-		cd WPSeku
-		pip install -r requirements.txt &
-		cd
-		#xsstrike
-		git clone https://github.com/UltimateHackers/XSStrike.git
-		cd XSStrike
-		pip install -r requirements.txt &
-		cd
-		#socialfish
-		git clone https://github.com/UndeadSec/SocialFish.git
-		cd SocialFish
-		pip install -r requirements.txt &
-		cd
-		#httrack
-		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
-		sh httrack
-		#theharvester
-		git clone https://github.com/laramies/theHarvester.git &
-		#ipython
-		pip install ipython
-		#Kuso
-		toilet -f mono12 -F gay nidhogg
-		#Install excellent third party Library
-		#Note: time may be very long
-		echo "time may be very long"
-		LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1 &
-		LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib pandas jupyter &
-		pip install BeautifulSoup4 requests &
-		pip install lxml &
-		pip install scrapy &
-		pip install demjson tushare colorama &
-		pip install pillow
-		pip install future
-		pip install paramiko
-		#Installation Tips
-		toilet -f mono12 -F gay installed
-	elif test $choice -eq 2
-	then
-		cd
-		#Install common tools
-		pkg install nmap hydra sslscan python python-dev python2 python2-dev curl tsu vim wget git unzip unrar sl clang nodejs php cmatrix tree toilet figlet cowsay w3m htop screenfetch -y
-		apt install vim-python -y
-		#upgrade
-		apt upgrade -y
-		#Update pip
-		python2 -m pip install --upgrade pip
-		python -m pip install --upgrade pip
-		#Install msf
-		wget https://Auxilus.github.io/metasploit.sh
-		bash metasploit.sh &
-		#Install whatportis
-		pip2 install whatportis
-		#sqlmap
-		git clone htts://github.com/sqlmapproject/sqlmap.git
-		#routersploit
-		pip2 install requests
-		git clone https://github.com/reverse-shell/routersploit
-		#RED_HAWK
-		git clone https://github.com/Tuhinshubhra/RED_HAWK.git
-		#cupp
-		git clone https://github.com/Mebus/cupp.git
-		#hash-buster
-		git clone https://github.com/UltimateHackers/Hash-Buster.git
-		#D-TECT
-		git clone https://github.com/shawarkhanethicalhacker/D-TECT.git
-		#WPSeku
-		git clone https://github.com/m4ll0k/WPSeku.git
-		cd WPSeku
-		pip install -r requirements.txt
-		cd
-		#xsstrike
-		git clone https://github.com/UltimateHackers/XSStrike.git
-		cd XSStrike
-		pip install -r requirements.txt
-		cd
-		#socialfish
-		git clone https://github.com/UndeadSec/SocialFish.git
-		cd SocialFish
-		pip install -r requirements.txt
-		cd
-		#theharvester
-		git clone https://github.com/laramies/theHarvester.git
-		#httrack
-		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
-		sh httrack
-	elif test $choice -eq 3
-	then
-		pkg install python python-dev python2 python2-dev -y
-		#Update pip
-		python2 -m pip install --upgrade pip
-		python -m pip install --upgrade pip
-		#Install python dependency Library
-		apt install libxml2 libxml2-dev libxslt libxslt-dev openssl libffi libffi-dev openssl-tool openssl-dev fftw fftw-dev libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config scrypt -y
-		pkg install libcrypt libcrypt-dev ccrypt libgcrypt libgcrypt-dev -y
-		#ipython
-		pip install ipython
-		#Kuso
-		toilet -f mono12 -F gay nidhogg
-		#Install excellent third party Library
-		#Note: time may be very long
-		echo "time may be very long"
-		LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1 &
-		LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib pandas jupyter &
-		pip install BeautifulSoup4 requests &
-		pip install lxml &
-		pip install scrapy &
-		pip install demjson tushare colorama &
-		pip install pillow &
-		pip install future
-		pip install paramiko
-		#Installation Tips
-		toilet -f mono12 -F gay installed
-	else
-		echo "please input 1,2or3"
-fi
+#! /bin/bash
+source ./hs.sh
+#定义颜色
+#红色
+red='\e[1;31m'
+#绿色
+green='\e[1;32m'
+#黄色
+yellow='\e[1;33m'
+#蓝色
+blue='\e[1;34m' 
+#洋红
+light_red='\e[1;35m' 
+#蓝绿色
+cyan='\e[1;36m' 
+apt upgrade -y
+clear
+qt(){
+	echo "作者nidhogg"
+	echo "感谢使用"
+	echo "*****************************************************************"
+	echo -e "${red}[1]好玩的&装逼"
+	echo -e "${green}[2]渗透测试套件"
+	echo -e "${yellow}[3]换源，换成清华源"
+	echo -e "${blue}[4]python及其库"
+	echo -e "${light_red}[5]所有东西(多线程)"
+	echo -e "${cyan}[6]安装最基本的工具"
+	echo  "[66]退出"
+	echo "*****************************************************************"
+	echo "请在下面输入选项然后回车哦"
+	echo -n "😊>"
+	read choice
+	case $choice in
+		1) hwd
+		;;
+		2) stcs
+		;;
+		3) echo "deb http://mirrors.tuna.tsinghua.edu.cn/termux" > $PREFIX/etc/apt/sources.list
+		;;
+		4) pyk
+		;;
+		5) bash all.sh
+		;;
+		6) pkg install curl tsu proot wget vim unzip unrar -y&&qt
+		;;
+		66) echo "感谢使用"
+		;;
+esac
+}
+qt
