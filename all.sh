@@ -68,6 +68,11 @@ if pwd
 		pip install pillow
 		pip install future
 		pip install paramiko
+		pip install nltk pymysql tflean jieba
+		curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh
+		pkg install scipy
+		pip install scikit-learn
+		pip install itchat
 		curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo
 		chmod +x atilo
 		./atilo install kali

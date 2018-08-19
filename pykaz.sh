@@ -14,3 +14,8 @@ pip install demjson tushare colorama &
 pip install pillow &
 pip install future
 pip install paramiko
+curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh
+pkg install scipy
+pip install nltk pymysql tflearn jieba
+pip install scikit-learn
+pip install itchat
