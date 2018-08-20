@@ -45,6 +45,7 @@ qt(){
 		6) pkg install curl tsu proot wget vim unzip unrar -y&&qt
 		;;
 		7) cd&&echo "set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1" >. vimrc&&echo "set enc=utf8" >>. vimrc&&echo set "fencs=utf8,gbk,gb2312,gb18030" >>. vimrc&&source. vimrc&&qt
+		;;
 		66) echo "感谢使用"
 		;;
 esac
