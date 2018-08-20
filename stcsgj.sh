@@ -47,4 +47,5 @@ if pwd
 		curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo 
 		chmod +x atilo
 		./atilo install kali
+	fi
 		

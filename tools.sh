@@ -39,7 +39,7 @@ qt(){
 		;;
 		4) pyk
 		;;
-		5) bash ./all.sh
+		5) bash all.sh
 		;;
 		6) pkg install curl tsu proot wget vim unzip unrar -y&&qt
 		;;

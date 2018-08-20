@@ -31,7 +31,7 @@ if pwd
 		#hash-buster
 		git clone https://github.com/UltimateHackers/Hash-Buster.git &
 		#D-TECT
-		git clone https://github.com/shawarkhanethicalhacker/D-TECT.gi &t
+		git clone https://github.com/shawarkhanethicalhacker/D-TECT.git &
 		#WPSeku
 		git clone https://github.com/m4ll0k/WPSeku.git &
 		cd WPSeku
@@ -52,8 +52,8 @@ if pwd
 		sh httrack
 		#theharvester
 		git clone https://github.com/laramies/theHarvester.git &
-		git clone https://github.com/m4ll0k/WAScan.git wascan
-		pip2 install BeautifulSoup
+		git clone https://github.com/m4ll0k/WAScan.git wascan &
+		pip2 install BeautifulSoup &
 		#ipython
 		pip install ipython
 		#Install excellent third party Library
@@ -65,14 +65,15 @@ if pwd
 		pip install lxml &
 		pip install scrapy &
 		pip install demjson tushare colorama &
-		pip install pillow
-		pip install future
-		pip install paramiko
-		pip install nltk pymysql tflean jieba
-		curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh
-		pkg install scipy
-		pip install scikit-learn
-		pip install itchat
+		pip install pillow &
+		pip install future &
+		pip install paramiko &
+		pip install nltk pymysql tflean jieba &
+		curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh &
+		pkg install scipy &
+		pip install scikit-learn &
+		pip install itchat &
 		curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo
 		chmod +x atilo
 		./atilo install kali
+	fi
