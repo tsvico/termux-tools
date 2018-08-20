@@ -1,3 +1,4 @@
+cd
 pkg install python python-dev python2 python2-dev -y
 python2 -m pip install --upgrade pip
 python -m pip install --upgrade pip

@@ -28,7 +28,7 @@ hwd()
 		;;
 		5) pkg install moon-buggy -y&&moon-buggy&&hwd
 		;;
-		6) pkg install nodejs -y&&npm install mapscii -g&&mapscii&&hwd
+		6) cd&&pkg install nodejs -y&&npm install mapscii -g&&mapscii
 		;;
 		7) pkg install tree -y&&tree&&hwd
 		;;
@@ -38,7 +38,7 @@ hwd()
 		;;
 		10) pkg install htop&&htop
 		;;
-		11) pkg install htop nyancat cowsay nodejs moon-buggy toilet figlet cmatrix sl -y&&npm install mapscii&&hwd
+		11) cd&&pkg install htop nyancat cowsay nodejs moon-buggy toilet figlet cmatrix sl -y&&npm install mapscii&&hwd
 		;;
 		12) qt
 		;;
@@ -74,29 +74,29 @@ stcs()
 	echo -n "😊>"
 	read srzl
 	case $srzl in
-		1) wget https://Auxilus.github.io/metasploit.sh&&bash metasploit.sh&&stcs
+		1) cd&&wget https://Auxilus.github.io/metasploit.sh&&bash metasploit.sh&&stcs
 		;;
-		2) git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev&&stcs
+		2) cd&&git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev&&stcs
 		;;
-		3) pip2 install requests&&git clone https://github.com/reverse-shell/routersploit&&stcs
+		3) cd&&pip2 install requests&&git clone https://github.com/reverse-shell/routersploit&&stcs
 		;;
-		4) git clone https://github.com/Tuhinshubhra/RED_HAWK.git&&stcs
+		4) cd&&git clone https://github.com/Tuhinshubhra/RED_HAWK.git&&stcs
 		;;
-		5) git clone https://github.com/Mebus/cupp.git&&stcs
+		5) cd&&git clone https://github.com/Mebus/cupp.git&&stcs
 		;;
-		6) git clone https://github.com/UltimateHackers/Hash-Buster.git&&stcs
+		6) cd&&git clone https://github.com/UltimateHackers/Hash-Buster.git&&stcs
 		;;
-		7) git clone https://github.com/shawarkhanethicalhacker/D-TECT.git&&stcs
+		7) cd&&git clone https://github.com/shawarkhanethicalhacker/D-TECT.git&&stcs
 		;;
-		8) git clone https://github.com/m4ll0k/WPSeku.git&&cd WPSeku&&pip install -r requirements.txt&&cd&&stcs
+		8) cd&&git clone https://github.com/m4ll0k/WPSeku.git&&cd WPSeku&&pip install -r requirements.txt&&cd&&stcs
 		;;
-		9) git clone https://github.com/UltimateHackers/XSStrike.git&&cd XSStrike&&pip install -r requirements.txt&&cd&&stcs
+		9) cd&&git clone https://github.com/UltimateHackers/XSStrike.git&&cd XSStrike&&pip install -r requirements.txt&&cd&&stcs
 		;;
-		10) git clone https://github.com/UndeadSec/SocialFish.git&&cd SocialFish&&pip install -r requirements.txt&&cd&&stcs
+		10) cd&&git clone https://github.com/UndeadSec/SocialFish.git&&cd SocialFish&&pip install -r requirements.txt&&cd&&stcs
 		;;
-		11) curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack&&sh httrack&&stcs
+		11) cd&&curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack&&sh httrack&&stcs
 		;;
-		12) git clone https://github.com/laramies/theHarvester.git&&stcs
+		12) cd&&git clone https://github.com/laramies/theHarvester.git&&stcs
 		;;
 		13) pip2 install whatportis&&stcs
 		;;
@@ -104,11 +104,11 @@ stcs()
 		;;
 		15) pkg install sslscan -y&&stcs
 		;;
-		16) git clone https://github.com/m4ll0k/WAScan.git&&pip install BeautifulSoup&&stcs
+		16) cd&&git clone https://github.com/m4ll0k/WAScan.git&&pip install BeautifulSoup&&stcs
 		;;
-		17) curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo&&chmod +x atilo&&./atilo install kali
+		17) cd&&curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo&&chmod +x atilo&&./atilo install kali
 		;;
-		18) bash stcsgj.sh
+		18) bash. /stcsgj.sh
 		;;
 		19) qt
 esac
@@ -180,7 +180,7 @@ pyk()
 		;;
 		18) pip install itcat&&pyk
 		;;
-		19) bash pykaz.sh&&pyk
+		19) bash. /pykaz.sh&&qt
 		;;
 		20) curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy scipy&&pyk
 		;;
