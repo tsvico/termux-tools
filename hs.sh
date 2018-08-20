@@ -108,7 +108,7 @@ stcs()
 		;;
 		17) cd&&curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo&&chmod +x atilo&&./atilo install kali
 		;;
-		18) bash. /stcsgj.sh
+		18) bash ./stcsgj.sh
 		;;
 		19) qt
 esac
@@ -180,7 +180,7 @@ pyk()
 		;;
 		18) pip install itcat&&pyk
 		;;
-		19) bash. /pykaz.sh&&qt
+		19) bash ./pykaz.sh&&qt
 		;;
 		20) curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy scipy&&pyk
 		;;

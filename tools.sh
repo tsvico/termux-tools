@@ -25,7 +25,6 @@ qt(){
 	echo -e "${blue}[4]python及其库"
 	echo -e "${light_red}[5]所有东西(多线程)"
 	echo -e "${cyan}[6]安装最基本的工具"
-	echo -e "[7]解决vim乱码''
 	echo  "[66]退出"
 	echo "*****************************************************************"
 	echo "请在下面输入选项然后回车哦"
@@ -40,11 +39,9 @@ qt(){
 		;;
 		4) pyk
 		;;
-		5) bash. /all.sh
+		5) bash ./all.sh
 		;;
 		6) pkg install curl tsu proot wget vim unzip unrar -y&&qt
-		;;
-		7) cd&&echo "set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1" >. vimrc&&echo "set enc=utf8" >>. vimrc&&echo set "fencs=utf8,gbk,gb2312,gb18030" >>. vimrc&&source. vimrc&&qt
 		;;
 		66) echo "感谢使用"
 		;;
