@@ -156,7 +156,7 @@ pyk()
 		;;
 		6) LDFLAGS=" -lm -lcompiler_rt" pip install pandas&&pyk
 		;;
-		7)LDFLAGS=" -lm -lcompiler_rt" pip install jupyter&&pyk
+		7) LDFLAGS=" -lm -lcompiler_rt" pip install jupyter&&pyk
 		;;
 		8) pip install lxml&&pyk
 		;;
