@@ -25,6 +25,8 @@ qt(){
 	echo -e "${blue}[4]python及其库"
 	echo -e "${light_red}[5]所有东西(多线程)"
 	echo -e "${cyan}[6]安装最基本的工具"
+    echo "[7]美化终端,需要自己选字体背景色"
+    echo "[8]vim buffer加成,支持代码补全……实验性"
 	echo  "[66]退出"
 	echo "*****************************************************************"
 	echo "请在下面输入选项然后回车哦"
@@ -43,6 +45,10 @@ qt(){
 		;;
 		6) pkg install curl tsu proot wget vim unzip unrar -y&&qt
 		;;
+        7) cd&&apt install zsh&&sh -c "$(wgethttps://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O-)"
+        ;;
+        8) apt install vim vim-python python python-dev&&wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
+        ;;
 		66) echo "感谢使用"
 		;;
 esac
