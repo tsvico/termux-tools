@@ -59,7 +59,7 @@ if pwd
 		#Install excellent third party Library
 		#Note: time may be very long
 		echo "time may be very long"
-		LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1 &
+		curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy scipy -y
 		LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib pandas jupyter &
 		pip install BeautifulSoup4 requests &
 		pip install lxml &
@@ -69,8 +69,6 @@ if pwd
 		pip install future &
 		pip install paramiko &
 		pip install nltk pymysql tflean jieba &
-		curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh &
-		pkg install scipy &
 		pip install scikit-learn &
 		pip install itchat &
 		curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo

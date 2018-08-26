@@ -43,7 +43,7 @@ hwd()
 		12) qt
 		;;
 		*) echo "请正确输入指令"&&hwd
-
+		;;
 esac
 }
 stcs()
@@ -111,6 +111,9 @@ stcs()
 		18) bash stcsgj.sh
 		;;
 		19) qt
+		;;
+		*) echo "请正确输入指令"&&stcs
+		;;
 esac
 }
 pyk()
@@ -148,9 +151,9 @@ pyk()
 		;;
 		2) python -m pip install --upgrade pip&&python2 -m pip install --upgrade pip&&pyk
 		;;
-		3) apt install libxml2 libxml2-dev libxslt libxslt-dev openssl libffi libffi-dev openssl-tool openssl-dev fftw fftw-dev libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config scrypt -y&&pkg install libcrypt libcrypt-dev ccrypt libgcrypt libgcrypt-dev -y&&pyk
+		3) apt install libxml2 libxml2-dev libxslt libxslt-dev openssl libffi libffi-dev openssl-tool openssl-dev fftw fftw-dev libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config scrypt -y&&pkg install libcrypt libcrypt-dev ccrypt libgcrypt libgcrypt-dev -y&&pkg install clang -y&&pyk
 		;;
-		4) LDFLAGS=" -lm -lcompiler_rt" pip install numpy==1.12.1&&pyk
+		4) cd&&curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy -y&&pyk
 		;;
 		5) LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib&&pyk
 		;;
@@ -182,9 +185,11 @@ pyk()
 		;;
 		19) bash pykaz.sh&&qt
 		;;
-		20) curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy scipy&&pyk
+		20) cd&&curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy scipy&&pyk
 		;;
 		21) qt
+		;;
+		*) echo "请正确输入指令"&&pyk
 		;;
 esac
 }
