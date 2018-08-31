@@ -47,7 +47,7 @@ qt(){
 		;;
         7) cd&&apt install zsh&&sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O-)"
         ;;
-        8) apt install vim vim-python python python-dev&&wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
+        8) cd&&apt install vim&&wget -qO- https://raw.github.com/ma6174/vim/master/setup.sh | sh -x
         ;;
 		66) echo "感谢使用"
 		;;
