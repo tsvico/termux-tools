@@ -11,7 +11,7 @@ if pwd
 		python -m pip install --upgrade pip
 		#Install msf
 		wget https://Auxilus.github.io/metasploit.sh
-		bash metasploit.sh &
+		bash metasploit.sh
 		#Install whatportis
 		pip2 install whatportis
 		#sqlmap
@@ -42,9 +42,11 @@ if pwd
 		#httrack
 		curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack
 		sh httrack
-		git clone https://github.com/m4ll0k/WAScan.git wascan
-		pip install BeautifulSoup &
-		curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo 
+		#wascab
+    git clone https://github.com/m4ll0k/WAScan.git wascan
+		pip install BeautifulSoup
+		#kali
+    curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo 
 		chmod +x atilo
 		./atilo install kali
 	fi

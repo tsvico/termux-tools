@@ -1,21 +1,36 @@
+whatandwhy()
+{
+  echo "         ▀        █  █                          "
+  echo "▄ ▄▄   ▄▄▄     ▄▄▄█  █ ▄▄    ▄▄▄    ▄▄▄▄   ▄▄▄▄ "
+  echo "█▀  █    █    █▀ ▀█  █▀  █  █▀ ▀█  █▀ ▀█  █▀ ▀█ "
+  echo "█   █    █    █   █  █   █  █   █  █   █  █   █ "
+  echo "█   █  ▄▄█▄▄  ▀█▄██  █   █  ▀█▄█▀  ▀█▄▀█  ▀█▄▀█ "
+  echo "                                    ▄  █   ▄  █ "
+  echo "                                     ▀▀     ▀▀  "
+}
+line()
+{
+  echo "——————————————————————————————————————————————————————————"
+}
 hwd()
 {
-	echo "*****************************************************************"
-	echo "[1]cmatrix(黑客数字流动)"
-	echo "[2]sl(跑火车)"
-	echo "[3]figlet(构造大字)"
-	echo "[4]toilet(感觉就是figlet增强)"
-	echo "[5]moon-buggy(游戏)"
-	echo "[6]终端地图"
-	echo "[7]tree(树状目录结构)"
-	echo "[8]cowsay(无法形容,可以自行百度)"
-	echo "[9]nyancat(彩虹猫)"
-	echo "[10]htop(任务管理器)"
-	echo "[11]安装上述所有东西"
-	echo "[12]返回主页面"
-	echo "*****************************************************************"
-	echo "请输入相应的指令哦"
-	echo -n "😊>"
+  whatandwhy
+  line
+  echo "[1]cmatrix"
+  echo "[2]sl"
+	echo "[3]figlet"
+  echo "[4]toilet"
+  echo "[5]moon-buggy"
+	echo "[6]asciimap"
+	echo "[7]tree"
+	echo "[8]cowsay"
+	echo "[9]nyancat"
+	echo "[10]htop"
+	echo "[11]all in one"
+	echo "[12]return" 
+	echo "Please enter the corresponding instruction"
+	line
+  echo -n "😊>"
 	read hw
 	case $hw in
 		1) pkg install cmatrix -y&&cmatrix
@@ -28,7 +43,7 @@ hwd()
 		;;
 		5) pkg install moon-buggy -y&&moon-buggy&&hwd
 		;;
-		6) cd&&pkg install nodejs -y&&npm install mapscii -g&&mapscii
+		6) cd&&pkg install nodejs -y&&npm install mapscii -g&&hwd
 		;;
 		7) pkg install tree -y&&tree&&hwd
 		;;
@@ -42,13 +57,14 @@ hwd()
 		;;
 		12) qt
 		;;
-		*) echo "请正确输入指令"&&hwd
+		*) echo "please input the correct instruction"&&hwd
 		;;
 esac
 }
 stcs()
 {
-	echo "*****************************************************************"
+  whatandwhy
+  line
 	echo "[1]metasploit"
 	echo "[2]sqlmap"
 	echo "[3]routersploit"
@@ -66,12 +82,12 @@ stcs()
 	echo "[15]sslscan"
 	echo "[16]wascan"
 	echo "[17]kali"
-	echo "[18]安装上述所有工具(多线程)"
-	echo "[19]返回主页面"
-	echo "注意，安装这些请先安装常用工具，必须要python2,3环境"
-	echo "*****************************************************************"
-	echo "请输入相应指令哦"
-	echo -n "😊>"
+	echo "[18]all in one"
+	echo "[19]return"
+	echo "ps.something need the python2 or python3"
+  echo "please input the correct instruction"
+	line
+  echo -n "😊>"
 	read srzl
 	case $srzl in
 		1) cd&&wget https://Auxilus.github.io/metasploit.sh&&bash metasploit.sh&&stcs
@@ -112,44 +128,44 @@ stcs()
 		;;
 		19) qt
 		;;
-		*) echo "请正确输入指令"&&stcs
+		*) echo "please input the correct instruction"&&stcs
 		;;
 esac
 }
 pyk()
 {
-	echo "*****************************************************************"
-	echo "[1]安装python2,3"
-	echo "[2]更新pip"
-	echo "[3]安装依赖"
-	echo "[4]安装numpy"
-	echo "[5]安装matplotlib"
-	echo "[6]安装pandas"
-	echo "[7]安装jupyter"
-	echo "[8]安装lxml"
-	echo "[9]安装scrapy"
-	echo "[10]安装BeautifulSoup4"
-	echo "[11]安装requests"
-	echo "[12]安装demjson"
-	echo "[13]安装tushare"
-	echo "[14]安装colorama"
-	echo "[15]安装pillow"
-	echo "[16]安装future"
-	echo "[17]安装paramiko"
-	echo "[18]安装itchat"
-	echo "[19]安装以上所有东西(多线程)"
-	echo "[20]如果numpy报错选这个(默认安装scipy)"
-	echo "[21]返回主页面"
-	echo "*****************************************************************"
-	echo "注意以上第三方库都是针对python3"
-	echo "请输入相应指令哦"
-	echo "注意！部分库在19选项中会默认安装，这里没有写出来！"
-	echo -n "😊>"
+  whatandwhy 
+  line
+	echo "[1]install python3"
+	echo "[2]update pip"
+	echo "[3]install dependent librarys"
+	echo "[4]install numpy"
+	echo "[5]install matplotlib"
+	echo "[6]install pandas"
+	echo "[7]install jupyter"
+	echo "[8]install lxml"
+	echo "[9]install scrapy"
+	echo "[10]install BeautifulSoup4"
+	echo "[11]install requests"
+	echo "[12]install demjson"
+	echo "[13]install tushare"
+	echo "[14]install colorama"
+	echo "[15]install pillow"
+	echo "[16]install future"
+	echo "[17]install paramiko"
+	echo "[18]install itchat"
+	echo "[19]all in one"
+	echo "[21]return"
+	echo "ps.these librarys only for python3"
+	echo "Please enter the corresponding instruction"
+  echo "Due to the some cause，the installation time probably very long"
+	line
+  echo -n "😊>"
 	read pyksr
 	case $pyksr in
-		1) pkg install python python-dev python2 python2-dev -y&&pyk
+		1) pkg install python python-dev-y&&pyk
 		;;
-		2) python -m pip install --upgrade pip&&python2 -m pip install --upgrade pip&&pyk
+		2) python -m pip install --upgrade pip&&pyk
 		;;
 		3) apt install libxml2 libxml2-dev libxslt libxslt-dev openssl libffi libffi-dev openssl-tool openssl-dev fftw fftw-dev libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config scrypt -y&&pkg install libcrypt libcrypt-dev ccrypt libgcrypt libgcrypt-dev -y&&pkg install clang -y&&pyk
 		;;
@@ -183,13 +199,11 @@ pyk()
 		;;
 		18) pip install itcat&&pyk
 		;;
-		19) bash pykaz.sh&&qt
-		;;
-		20) cd&&curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy scipy&&pyk
+		19) bash pykaz.sh
 		;;
 		21) qt
 		;;
-		*) echo "请正确输入指令"&&pyk
+		*) echo "Please input correct instruction"&&pyk
 		;;
 esac
 }
