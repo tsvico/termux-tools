@@ -12,7 +12,7 @@ git clone https://github.com/nidhoggfgg/termux-tools-install.git tools
 cd tools
 bash tools.sh
 ```
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-b09572e606f1e3a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
+截图在最底下
 如果你遇到了以下问题，那么我或许可以解决
 1.python库安装失败
 2.python库下载非常慢
@@ -30,7 +30,7 @@ pip install lxml
 
 ```
 2.python库下载慢，可以使用国内源加一个i选项
-比如
+比如(注意:本人并没有默认使用清华源，如果你觉得慢可以按如下指令执行)
 ```
 #安装numpy
 pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
@@ -55,13 +55,24 @@ git clone https://github.com/nidhoggfgg/termux-tools-install.git tools
 cd tools
 bash tools.sh
 ```
-screenshot
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-b09572e606f1e3a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
-1.The python three part library install fail
-You can inspect the dependent library.If the lxml install fail,you can run these instruction
+The python three part library install fail
+You can inspect the dependent library.
+If the lxml install fail,you can run these instruction
 ```
 cd tools/other 
 dpkg -i *.deb
 pip install lxml
 ```
+截图(screenshot)
+![screenshot](http://upload-images.jianshu.io/upload_images/13567684-da3689557ae2fe47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
+
+![screenshot](http://upload-images.jianshu.io/upload_images/13567684-0878c5b0093186a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
+
+![screenshot](http://upload-images.jianshu.io/upload_images/13567684-9569aaae396ba1b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
+
+![screenshot](http://upload-images.jianshu.io/upload_images/13567684-90a5b0dace8af025.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
+
+![screenshot](http://upload-images.jianshu.io/upload_images/13567684-fdf24bd301124760.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
+
+![screenshot](http://upload-images.jianshu.io/upload_images/13567684-d120033cf7e5f69f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
 
