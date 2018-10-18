@@ -64,6 +64,7 @@ dpkg -i *.deb
 pip install lxml
 ```
 截图(screenshot)
+
 ![screenshot](http://upload-images.jianshu.io/upload_images/13567684-da3689557ae2fe47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
 
 ![screenshot](http://upload-images.jianshu.io/upload_images/13567684-0878c5b0093186a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
