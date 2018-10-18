@@ -12,8 +12,7 @@ git clone https://github.com/nidhoggfgg/termux-tools-install.git tools
 cd tools
 bash tools.sh
 ```
-程序截图如下
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-b09572e606f1e3a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720↷)
+![screenshot](http://upload-images.jianshu.io/upload_images/13567684-b09572e606f1e3a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
 如果你遇到了以下问题，那么我或许可以解决
 1.python库安装失败
 2.python库下载非常慢
