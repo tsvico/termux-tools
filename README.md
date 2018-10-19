@@ -35,7 +35,7 @@ pip install lxml
 #安装numpy
 pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-3.因为某些不知名的原因，aqlmap可能不会自动安装，按照如下指令安装即可
+3.因为某些不知名的原因，sqlmap可能不会自动安装，按照如下指令安装即可
 ```
 git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 ```
