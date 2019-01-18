@@ -156,6 +156,7 @@ pyk()
   echo "[19]$all"
   echo "[21]$return"
   echo "[99]$fail"
+  echo "[100]$pil"
   echo "$ps"
   echo "$ts"
   echo "$long"
@@ -204,6 +205,8 @@ pyk()
     21) qt
       ;;
     99) curl -L https://its-pointless.github.io/setup-pointless-repo.sh | sh&&pkg install numpy scipy -y&&pyk
+      ;;
+    100) pkg -y install python python-dev ndk-sysroot clang mak libjpeg-turbo-dev -y&&apt install libllvm-dev -y&&pyk
       ;;
     *) echo "$ot"&&pyk
       ;;

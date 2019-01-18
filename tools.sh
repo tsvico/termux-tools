@@ -22,6 +22,7 @@ what()
   long="ps. the installation time maybe very long"
   fail="If the numpy&scipy installed fail,please check me"
   thank="Thank for using"
+  pil="pillow dependent lib"
   qt
 }
 why()
@@ -44,6 +45,7 @@ why()
   long="注意，安装时间可能非常长"
   fail="安装numpy&scipy失败选这个"
   thank="感谢使用"
+  pil="pillow依赖库"
   qt
 }
 qt()

@@ -17,6 +17,8 @@ dpkg -i *.deb
 pip install lxml
 pip install scrapy
 pip install demjson tushare colorama
+pkg install python python-dev ndk-sysroot clang make libjpeg-turbo-dev -y
+apt install libllvm-dev -y
 pip install pillow
 pip install future
 pip install paramiko
