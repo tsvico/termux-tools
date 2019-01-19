@@ -1,6 +1,9 @@
 #! /bin/bash
 source ./hs.sh 
 apt upgrade -y
+pkg install wget -y
+wget https://its-pointless.github.io/setup-pointless-repo.sh
+bash setup-pointless-repo.sh
 clear
 what()
 {
