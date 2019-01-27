@@ -306,41 +306,41 @@ function start()
 {
   logo
   line
-  echo -e "$color1 [1]$interesting"
-  echo -e "$color2 [2]$hack"
-  echo -e "$color3 [3]$change_source"
+  echo -e "$color1 [1]$basic_tools"
+  echo -e "$color2 [2]$interesting"
+  echo -e "$color3 [3]$hack"
   echo -e "$color4 [4]$python_lib"
-  echo -e "$color5 [5]$all"
-  echo -e "$color6 [6]$basic_tools"
+  echo -e "$color5 [5]$change_source"
+  echo -e "$color6 [6]$source_its_pointless"
   echo -e "$color5 [7]$embellish_terminal"
   echo -e "$color4 [8]$vim"
-  echo -e "$color3 [9]$source_its_pointless"
-  echo -e "$color2 [10]$soft_keyboard"
+  echo -e "$color3 [9]$soft_keyboard"
+  echo -e "$color2 [10]$all"
   echo -e "$color1 [66]$q"
   echo -e "$color6 $please_input"
   line
   inp
   read choice
   case $choice in
-    1) interesting_things
+    1) pkg install curl tsu proot wget vim unzip unrar man -y&&start
       ;;
-    2) pentest_tools
+    2) interesting_things
       ;;
-    3) echo "deb http://mirrors.tuna.tsinghua.edu.cn/termux stable main" > $PREFIX/etc/apt/sources.list&&start
+    3) pentest_tools
       ;;
     4) python_libs
       ;;
-    5) bash all.sh
+    5) echo "deb http://mirrors.tuna.tsinghua.edu.cn/termux stable main" > $PREFIX/etc/apt/sources.list&&start
       ;;
-    6) pkg install curl tsu proot wget vim unzip unrar man -y&&start
+    6) bash repo.sh&&start
       ;;
     7) cd&&apt install zsh&&sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O-)"
       ;;
     8) cd&&pkg install vim&&curl -sLf https://spacevim.org/install.sh | bash
       ;;
-    9) pkg install wget -y&&bash repo.sh&&start
+    9) rm -rf $HOME/.termux/&&mkdir $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
       ;;
-    10) mkdir $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
+    10) bash all.sh
       ;;
     66) echo "$thank"
       ;;
