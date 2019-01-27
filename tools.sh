@@ -50,7 +50,7 @@ function Chinese()
   long_time="注意，安装时间可能非常长"
   thank="感谢使用"
   source_its_pointless="加一个源以安装更多软件"
-  soft_keyboard="使用完整的软件盘(只针对0.66版)"
+  soft_keyboard="使用完整的软键盘(只针对0.66版)"
   start
 }
 
