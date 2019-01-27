@@ -311,7 +311,7 @@ function start()
   echo -e "$color3 [3]$change_source"
   echo -e "$color4 [4]$python_lib"
   echo -e "$color5 [5]$all"
-  echo -e "$color6 [6]$basic"
+  echo -e "$color6 [6]$basic_tools"
   echo -e "$color5 [7]$embellish_terminal"
   echo -e "$color4 [8]$vim"
   echo -e "$color3 [9]$source_its_pointless"
