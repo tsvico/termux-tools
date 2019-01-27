@@ -338,7 +338,7 @@ function start()
       ;;
     8) cd&&pkg install vim&&curl -sLf https://spacevim.org/install.sh | bash
       ;;
-    9) rm -rf $HOME/.termux/&&mkdir $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
+    9) mkdir -p $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
       ;;
     10) bash all.sh
       ;;
