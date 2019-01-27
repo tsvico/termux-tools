@@ -1,10 +1,10 @@
 #! /bin/bash
-color1="\e[31m"
-color2="\e[32m"
-color3="\e[33m"
-color4="\e[34m"
-color5="\e[35m"
-color6="\e[37m"
+color1="\e[0;31;40m"
+color2="\e[0;32;40m"
+color3="\e[0;33;40m"
+color4="\e[0;34;40m"
+color5="\e[0;35;40m"
+color6="\e[0;37;40m"
 color7="\e[0;30;47m"
 color8="\e[0m"
 
@@ -90,18 +90,18 @@ function interesting_things()
 {
   logo
   line
-  echo -e "$color1[1]cmatrix       |[13]screenfetch"
-  echo -e "$color2[2]sl            |[14]fortune"
-  echo -e "$color3[3]figlet        |[15}factor"
-  echo -e "$color4[4]toilet        |[16]nsnake"
-  echo -e "$color5[5]moon-buggy    |[17]cal"
-  echo -e "$color6[6]asciimap      |[18]pv"
-  echo -e "$color6[7]tree          |[19]2048"
-  echo -e "$color5[8]cowsay        |[20]bastet"
-  echo -e "$color4[9]nyancat       |[21]greed"
-  echo -e "$color3[10]htop         |[22]pacman4console"
-  echo -e "$color2[11]nethack      |[23]$all"
-  echo -e "$color1[12]weather      |[66]$return" 
+  echo -e "$color1[0;1cmatrix       |[0;13screenfetch"
+  echo -e "$color2[0;2sl            |[0;14fortune"
+  echo -e "$color3[0;3figlet        |[0;15}factor"
+  echo -e "$color4[0;4toilet        |[0;16nsnake"
+  echo -e "$color5[0;5moon-buggy    |[0;17cal"
+  echo -e "$color6[0;6asciimap      |[0;18pv"
+  echo -e "$color6[0;7tree          |[0;192048"
+  echo -e "$color5[0;8cowsay        |[0;20bastet"
+  echo -e "$color4[0;9nyancat       |[0;21greed"
+  echo -e "$color3[0;10htop         |[0;22pacman4console"
+  echo -e "$color2[0;11nethack      |[0;23$all"
+  echo -e "$color1[0;12weather      |[0;66$return" 
   echo -e "$color8$please_input"
   line
   inp
@@ -161,20 +161,20 @@ esac
 }
 function pentest_tools()
 {
-  whatandwhy
+  logo
   line
-  echo -e "$color1[1]metasploit    |[12]whatportis"
-  echo -e "$color2[2]sqlmap        |[13]hydra"
-  echo -e "$color3[3]routersploit  |[14]sslscan"
-  echo -e "$color4[4]RED_HAWK      |[15]wascan"
-  echo -e "$color5[5]cupp          |[16]kali"
-  echo -e "$color6[6]hash-buster   |[17]nmap"
-  echo -e "$color5[7]D-TECT        |[18]SET"
-  echo -e "$color4[8]WPseku        |[19]fimap"
-  echo -e "$color3[9]xsstrike      |[20]nikto"
-  echo -e "$color2[10]socialfish   |[21]thehavester"
-  echo -e "$color1[11]httrack      |[22]$all"
-  echo -e "$color8[66]$return"
+  echo -e "$color1[0;1metasploit    |[0;12whatportis"
+  echo -e "$color2[0;2sqlmap        |[0;13hydra"
+  echo -e "$color3[0;3routersploit  |[0;14sslscan"
+  echo -e "$color4[0;4RED_HAWK      |[0;15wascan"
+  echo -e "$color5[0;5cupp          |[0;16kali"
+  echo -e "$color6[0;6hash-buster   |[0;17nmap"
+  echo -e "$color5[0;7D-TECT        |[0;18SET"
+  echo -e "$color4[0;8WPseku        |[0;19fimap"
+  echo -e "$color3[0;9xsstrike      |[0;20nikto"
+  echo -e "$color2[0;10socialfish   |[0;21thehavester"
+  echo -e "$color1[0;11httrack      |[0;22$all"
+  echo -e "$color8[0;66$return"
   echo "$please_input"
   line
   inp
@@ -232,20 +232,20 @@ esac
 }
 function python_libs()
 {
-  whatandwhy
+  logo
   line
-  echo -e "$color1[1]python3       |[13]tushare"
-  echo -e "$color2[2]ipython       ||[14]colorama"
-  echo -e "$color3[3]scapy         ||[15]pillow"
-  echo -e "$color4[4]numpy         |[16]future"
-  echo -e "$color5[5]matplotlib    |[17]paramiko"
-  echo -e "$color6[6]pandas        |[18]itchat"
-  echo -e "$color6[7]jupyter       |[19]scipy"
-  echo -e "$color5[8]lxml          |[20]asciimatics"
-  echo -e "$color4[9]scrapy        |[21]$lib"
-  echo -e "$color3[10]bs4          |[22]$update_pip"
-  echo -e "$color2[11]requests     |[23]$all"
-  echo -e "$color1[12]demjson      |[66]$return"
+  echo -e "$color1[0;1python3       |[0;13tushare"
+  echo -e "$color2[0;2ipython       ||[0;14colorama"
+  echo -e "$color3[0;3scapy         ||[0;15pillow"
+  echo -e "$color4[0;4numpy         |[0;16future"
+  echo -e "$color5[0;5matplotlib    |[0;17paramiko"
+  echo -e "$color6[0;6pandas        |[0;18itchat"
+  echo -e "$color6[0;7jupyter       |[0;19scipy"
+  echo -e "$color5[0;8lxml          |[0;20asciimatics"
+  echo -e "$color4[0;9scrapy        |[0;21$lib"
+  echo -e "$color3[0;10bs4          |[0;22$update_pip"
+  echo -e "$color2[0;11requests     |[0;23$all"
+  echo -e "$color1[0;12demjson      |[0;66$return"
   echo -e "$color8$ps"
   echo "$please_input"
   echo "$long_time"
@@ -306,19 +306,19 @@ esac
 
 function start()
 {
-  whatandwhy
+  logo
   line
-  echo -e "$color1 [1]$interesting"
-  echo -e "$color2 [2]$hack"
-  echo -e "$color3 [3]$change_source"
-  echo -e "$color4 [4]$python_lib"
-  echo -e "$color5 [5]$all"
-  echo -e "$color6 [6]$basic"
-  echo -e "$color5 [7]$embellish_terminal"
-  echo -e "$color4 [8]$vim"
-  echo -e "$color3 [9]$source_its_pointless"
-  echo -e "$color2 [10]$soft_keyboard"
-  echo -e "$color1 [66]$q"
+  echo -e "$color1 [0;1$interesting"
+  echo -e "$color2 [0;2$hack"
+  echo -e "$color3 [0;3$change_source"
+  echo -e "$color4 [0;4$python_lib"
+  echo -e "$color5 [0;5$all"
+  echo -e "$color6 [0;6$basic"
+  echo -e "$color5 [0;7$embellish_terminal"
+  echo -e "$color4 [0;8$vim"
+  echo -e "$color3 [0;9$source_its_pointless"
+  echo -e "$color2 [0;10$soft_keyboard"
+  echo -e "$color1 [0;66$q"
   echo -e "$color1 $please_input"
   line
   inp
@@ -353,8 +353,10 @@ esac
 
 choosepeo()
 {
-  echo "[1]I know English"
-  echo "[2]我懂中文"
+  apt upgrade -y
+  clear
+  echo "[0;1I know English"
+  echo "[0;2我懂中文"
   inp
   read peo 
   case $peo in
