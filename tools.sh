@@ -5,7 +5,6 @@ color3="\e[0;33;40m"
 color4="\e[0;34;40m"
 color5="\e[0;35;40m"
 color6="\e[0;37;40m"
-color7="\e[0;30;47m"
 
 function English()
 {
@@ -67,11 +66,11 @@ function logo()
 }
 function line()
 {
-  echo -e "$color7——————————————————————————————————————————————————————"
+  echo -e "$color6————————————————————————————————————————————————————————"
 }
 function inp()
 {
-    echo -en "$color7😊>"
+    echo -en "$color6😊>"
 }
 
 function plibs()
@@ -101,7 +100,7 @@ function interesting_things()
   echo -e "$color3[10]htop         |[22]pacman4console"
   echo -e "$color2[11]nethack      |[23]$all"
   echo -e "$color1[12]weather      |[66]$return" 
-  echo -e "$color7$please_input"
+  echo -e "$color6$please_input"
   line
   inp
   read hw
@@ -173,7 +172,7 @@ function pentest_tools()
   echo -e "$color3[9]xsstrike      |[20]nikto"
   echo -e "$color2[10]socialfish   |[21]thehavester"
   echo -e "$color1[11]httrack      |[22]$all"
-  echo -e "$color7[66]$return"
+  echo -e "$color6[66]$return"
   echo "$please_input"
   line
   inp
@@ -245,7 +244,7 @@ function python_libs()
   echo -e "$color3[10]bs4          |[22]$update_pip"
   echo -e "$color2[11]requests     |[23]$all"
   echo -e "$color1[12]demjson      |[66]$return"
-  echo -e "$color7$ps"
+  echo -e "$color6$ps"
   echo "$please_input"
   echo "$long_time"
   line
@@ -318,7 +317,7 @@ function start()
   echo -e "$color3 [9]$source_its_pointless"
   echo -e "$color2 [10]$soft_keyboard"
   echo -e "$color1 [66]$q"
-  echo -e "$color7 $please_input"
+  echo -e "$color6 $please_input"
   line
   inp
   read choice
