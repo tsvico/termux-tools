@@ -8,61 +8,30 @@
 食用方法
 ```
 pkg install git -y
-git clone https://github.com/nidhoggfgg/termux-tools-install.git tools
-cd tools
+git clone https://github.com/nidhoggfgg/whatandwhy.git
+cd whatandwhy
 bash tools.sh
 ```
 截图在最底下
-如果你遇到了以下问题，那么我或许可以解决
-1.python库安装失败
-2.python库下载非常慢
-3.sqlmap未能自动安装
-解决方法:
-1.如果是python库安装失败，请先安装依赖。
-如果依赖完整，仍然安装失败，那么多试几次
-如果是lxml安装失败，你可以使用我的脚本解决(仅限aarch，arm懒得下了)
-执行下列指令
-```
-cd tools/other
-dpkg -i *.deb
-pip install lxml
-#需要很长时间
-
-```
-2.python库下载慢，可以使用国内源加一个i选项
-比如(注意:本人并没有默认使用清华源，如果你觉得慢可以按如下指令执行)
-```
-#安装numpy
-pip install numpy -i https://pypi.tuna.tsinghua.edu.cn/simple
-```
-3.因为某些不知名的原因，sqlmap可能不会自动安装，按照如下指令安装即可
-```
-git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
-```
+----
+English
+----
 This is a shell script for installing what you need.
 And you can install python three part library easy.For example numpy,matplotlib,lxml and so on,only with one key.
 It also can help you to install penetration test tools,msf,sqlmap……
 ps.The installation time maybe very long and maybe wrong.
 Don't worry.If you meet some mistakes，please slide down，I maybe know how to slove.
-
------
+------
 Due to I have a holiday once a month，I can't often update it.If you find something wrong you probably have to fix it with yourself.
 -------
 installation method
 ```
 pkg install git -y
-git clone https://github.com/nidhoggfgg/termux-tools-install.git tools
-cd tools
+git clone https://github.com/nidhoggfgg/whatandwhy.git
+cd whatandwhy
 bash tools.sh
 ```
-The python three part library install fail
-You can inspect the dependent library.
-If the lxml install fail,you can run these instruction
-```
-cd tools/other 
-dpkg -i *.deb
-pip install lxml
-```
+
 截图(screenshot)
 
 ![screenshot](http://upload-images.jianshu.io/upload_images/13567684-da3689557ae2fe47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
