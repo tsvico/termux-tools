@@ -340,7 +340,7 @@ function start()
       ;;
     9) pkg install wget -y&&bash repo.sh&&start
       ;;
-    10) 
+    10) mkdir $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
       ;;
     66) echo "$thank"
       ;;

@@ -30,7 +30,3 @@ git clone https://github.com/nidhoggfgg/whatandwhy.git
 cd whatandwhy
 bash tools.sh
 ```
-
-Thanks. [It works for me with this command](https://imgur.com/a/32WuCMS).
-
-mkdir $HOME/.termux/ ;echo "extra-keys = \[\['ESC','/','-','HOME','UP','END','PGUP'\],\['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN'\]\]" >> $HOME/.termux/termux.properties
