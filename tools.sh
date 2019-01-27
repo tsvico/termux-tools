@@ -141,13 +141,13 @@ function interesting_things()
       ;;
     18) pkg install pv&&interesting_things
       ;;
-    19) cd&&git clone https://github.com/mydzor/bash2048.git&&interesting&&cd whatandwhy
+    19) cd&&git clone https://github.com/mydzor/bash2048.git&&interesting_things&&cd whatandwhy
       ;;
     20) its&&apt install bastet -y&&interesting_things
       ;;
     21) apt install greed -y&&interesting_things  
       ;;
-    22) its&&apt insatll pacman4console -y&&interesting_things   
+    22) its&&apt install pacman4console -y&&interesting_things   
       ;;
     23) bash all_interesting.sh 
       ;;
@@ -338,7 +338,7 @@ function start()
       ;;
     8) cd&&pkg install vim&&curl -sLf https://spacevim.org/install.sh | bash
       ;;
-    9) mkdir -p $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
+    9) rm -rf $HOME/.termux/&&mkdir $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
       ;;
     10) bash all.sh
       ;;
