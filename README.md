@@ -12,7 +12,6 @@ git clone https://github.com/nidhoggfgg/whatandwhy.git
 cd whatandwhy
 bash tools.sh
 ```
-截图在最底下
 ----
 English
 ----
@@ -32,17 +31,6 @@ cd whatandwhy
 bash tools.sh
 ```
 
-截图(screenshot)
+Thanks. [It works for me with this command](https://imgur.com/a/32WuCMS).
 
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-da3689557ae2fe47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
-
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-0878c5b0093186a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
-
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-9569aaae396ba1b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
-
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-90a5b0dace8af025.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
-
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-fdf24bd301124760.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
-
-![screenshot](http://upload-images.jianshu.io/upload_images/13567684-d120033cf7e5f69f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/720/q/50)
-
+mkdir $HOME/.termux/ ;echo "extra-keys = \[\['ESC','/','-','HOME','UP','END','PGUP'\],\['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN'\]\]" >> $HOME/.termux/termux.properties
