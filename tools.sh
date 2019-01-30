@@ -334,7 +334,7 @@ function start()
       ;;
     6) bash repo.sh&&start
       ;;
-    7) cd&&apt install zsh&&sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O-)"&&message
+    7) cd&&rm -rf $HOME/.termux&&apt install zsh&&sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"&&message
       ;;
     8) cd&&pkg install vim&&curl -sLf https://spacevim.org/install.sh | bash
       ;;
