@@ -180,7 +180,7 @@ function pentest_tools()
   case $srzl in
     1) cd&&wget https://Auxilus.github.io/metasploit.sh&&bash metasploit.sh&&pentest_tools&&cd whatandwhy
       ;;
-    2) cd&&git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev&&pentest_tools&&cd whatandwhy
+    2) pkg install python2 python2-dev -y&&pip2 install --upgrade pip&&pip2 install sqlmap
       ;;
     3) cd&&pip2 install requests&&git clone https://github.com/reverse-shell/routersploit&&pentest_tools&&cd whatandwhy
       ;;
