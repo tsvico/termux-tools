@@ -1,11 +1,12 @@
 # If you are not a Chinese，and you know English，please slide down.
 派生自 https://github.com/nidhoggfgg/whatandwhy
-按照我常用的一些做了修改和Bug处理，后续可能会加上nginx网站一键配置，BiliHelper一键部署等等
+按照我常用的一些做了修改和Bug处理，后续可能会加上nginx网站一键配置，BiliHelper一键部署等等  
+-------
 食用方法
 ```
 pkg update&&pkg install git -y
 git clone https://github.com/tsvico/termux-tools.git
-cd whatandwhy
+cd termux-tools
 bash tools.sh
 ```
 ----
@@ -20,6 +21,6 @@ installation method
 ```
 pkg update&&pkg install git -y
 git clone https://github.com/tsvico/termux-tools.git
-cd whatandwhy
+cd termux-tools
 bash tools.sh
 ```
