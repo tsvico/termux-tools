@@ -7,7 +7,7 @@
 其实这个脚本开发当初只是为了自己能很方便地配置好termux，玩机者嘛。。。总喜欢刷机
 食用方法
 ```
-pkg install git -y
+pkg update&&pkg install git -y
 git clone https://github.com/nidhoggfgg/whatandwhy.git
 cd whatandwhy
 bash tools.sh
@@ -25,7 +25,7 @@ Due to I have a holiday once a month，I can't often update it.If you find somet
 -------
 installation method
 ```
-pkg install git -y
+pkg update&&pkg install git -y
 git clone https://github.com/nidhoggfgg/whatandwhy.git
 cd whatandwhy
 bash tools.sh
