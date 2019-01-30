@@ -263,7 +263,7 @@ function python_libs()
       ;;
     6) LDFLAGS=" -lm -lcompiler_rt" pip install pandas&&python_libs
       ;;
-    7) LDFLAGS=" -lm -lcompiler_rt" pip install jupyter&&python_libs
+    7) apt install clang python python-dev fftw libzmq libzmq-dev -y&&LDFLAGS=" -lm -lcompiler_rt" pip install jupyter&&python_libs
       ;;
     8) pip install lxml&&python_libs
       ;;
@@ -279,7 +279,7 @@ function python_libs()
       ;;
     14) pip install colorama&&python_libs
       ;;
-    15) pip install pillow&&python_libs
+    15) apt install python python-dev ndk-sysroot clang make libjpeg-turbo-dev -y&&pip install pillow&&python_libs
       ;;
     16) pip install future&&python_libs
       ;;
