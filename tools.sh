@@ -234,7 +234,7 @@ function python_libs()
   line
   echo -e "$color1[1]python3       |[13]tushare"
   echo -e "$color2[2]ipython       |[14]colorama"
-  echo -e "$color3[3]scapy         |[15]pillow"
+  echo -e "$color3[3]scrapy         |[15]pillow"
   echo -e "$color4[4]numpy         |[16]future"
   echo -e "$color5[5]matplotlib    |[17]paramiko"
   echo -e "$color6[6]pandas        |[18]itchat"
