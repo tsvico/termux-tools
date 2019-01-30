@@ -334,11 +334,11 @@ function start()
       ;;
     6) bash repo.sh&&start
       ;;
-    7) cd&&apt install zsh&&sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
+    7) cd&&apt install zsh&&sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O-)"&&message
       ;;
     8) cd&&pkg install vim&&curl -sLf https://spacevim.org/install.sh | bash
       ;;
-    9) mkdir -p $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties
+    9) mkdir -p $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties&&message
       ;;
     10) bash all.sh
       ;;
@@ -347,6 +347,13 @@ function start()
     *) echo "$re_input"&&start
       ;;
 esac
+}
+
+
+function message()
+{
+	echo "Please restart termux"
+	echo "重启生效"
 }
 
 choosepeo()
