@@ -315,7 +315,9 @@ function start()
   echo -e "$color5 [7]$embellish_terminal"
   echo -e "$color4 [8]$vim"
   echo -e "$color3 [9]$soft_keyboard"
-  echo -e "$color2 [10]$all"
+  echo -e "$color2 [10]安装Atilo Linux"
+  echo -e "$color2 [11]管理Atilo Linux"
+  echo -e "$color1 [12]$all"
   echo -e "$color1 [66]$q"
   echo -e "$color6 $please_input"
   line
@@ -340,7 +342,11 @@ function start()
       ;;
     9) mkdir -p $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties&&message
       ;;
-    10) bash all.sh
+	10)echo "deb [trusted=yes] https://yadominjinta.github.io/files/ termux    extras" >> $PREFIX/etc/apt/sources.list&&pkg in atilo-cn
+	  ;;
+	11)ati
+	  ;;
+    12) bash all.sh
       ;;
     66) echo "$thank"
       ;;
@@ -355,7 +361,39 @@ function message()
 	echo "Please restart termux"
 	echo "重启生效"
 }
-
+function ati()
+{
+  apt update
+  apt upgrade -y
+  echo "关于Atilo 在Termux安装Linux的bash脚本"
+  echo "Atilo is a bash script to help you install some GNU/Linux distributions on Termux."
+  echo "项目地址 https://github.com/YadominJinta/atilo"
+  echo "***********************"
+  echo "[1]列出可用的和已安装的发行版/list"
+  echo "[2]安装/install"
+  echo "[3]移除/remove"
+  echo "[66]退出/exit"
+  inp
+  read linux 
+  case $linux in
+    1) atilo list&&ati
+      ;;
+    2) echo "直接输入发行版名称/input name"
+	   inp
+	   read name
+	   atilo install $name&&ati
+	   ;;
+	3) echo "输入要移除的名字/remove name"
+	   inp
+	   read namea
+	   atilo remove $namea&&ati
+	   ;;
+	66)start
+	   ;;
+    *) echo "please input"&&echo "请输入"&&ati 
+      ;;
+  esac
+}
 choosepeo()
 {
   apt upgrade -y
