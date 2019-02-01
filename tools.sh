@@ -228,6 +228,10 @@ function pentest_tools()
       ;;
 esac
 }
+function lib()
+{
+  apt install python python-dev clang fftw libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config
+}
 function python_libs()
 {
   logo
@@ -246,7 +250,8 @@ function python_libs()
   echo -e "$color1[12]demjson      |[66]$return"
   echo -e "$color6$ps"
   echo "$please_input"
-  echo "$long_time"
+  #echo "$long_time"
+  echo "安装matplotlib需要先装numpy,再一起装pandas和matplotlib"
   line
   inp
 	read pykssr
@@ -259,9 +264,9 @@ function python_libs()
       ;;
     4) its&&apt install numpy -y&&python_libs
       ;;
-    5) LDFLAGS=" -lm -lcompiler_rt" pip install matplotlib&&python_libs
+    5) LDFLAGS=" -lm -lcompiler_rt" pip install numpy matplotlib pandas&&python_libs
       ;;
-    6) LDFLAGS=" -lm -lcompiler_rt" pip install pandas&&python_libs
+    6) LDFLAGS=" -lm -lcompiler_rt" pip install numpy matplotlib pandas&&python_libs
       ;;
     7) apt install clang python python-dev fftw libzmq libzmq-dev -y&&LDFLAGS=" -lm -lcompiler_rt" pip install jupyter&&python_libs
       ;;
