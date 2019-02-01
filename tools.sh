@@ -252,6 +252,7 @@ function python_libs()
   echo "$please_input"
   #echo "$long_time"
   echo "安装matplotlib需要先装numpy,再一起装pandas和matplotlib"
+  echo "安装如果出现失败请输入21 安装$lib"
   line
   inp
 	read pykssr
