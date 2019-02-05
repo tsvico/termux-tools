@@ -141,7 +141,7 @@ function interesting_things()
       ;;
     18) pkg install pv&&interesting_things
       ;;
-    19) cd&&git clone https://github.com/mydzor/bash2048.git&&interesting_things&&cd whatandwhy
+    19) cd&&git clone https://github.com/mydzor/bash2048.git&&interesting_things&&cd termux-tools
       ;;
     20) its&&apt install bastet -y&&interesting_things
       ;;
@@ -178,47 +178,47 @@ function pentest_tools()
   inp
   read srzl
   case $srzl in
-    1) cd&&wget https://Auxilus.github.io/metasploit.sh&&bash metasploit.sh&&pentest_tools&&cd whatandwhy
+    1) cd&&wget https://Auxilus.github.io/metasploit.sh&&bash metasploit.sh&&pentest_tools&&cd termux-tools
       ;;
     2) pkg install python2 python2-dev -y&&pip2 install --upgrade pip&&pip2 install sqlmap
       ;;
-    3) cd&&pip2 install requests&&git clone https://github.com/reverse-shell/routersploit&&pentest_tools&&cd whatandwhy
+    3) cd&&pip2 install requests&&git clone https://github.com/reverse-shell/routersploit&&pentest_tools&&cd termux-tools
       ;;
-    4) cd&&git clone https://github.com/Tuhinshubhra/RED_HAWK.git&&pentest_tools&&cd whatandwhy
+    4) cd&&git clone https://github.com/Tuhinshubhra/RED_HAWK.git&&pentest_tools&&cd termux-tools
       ;;
-    5) cd&&git clone https://github.com/Mebus/cupp.git&&pentest_tools&&cd whatandwhy
+    5) cd&&git clone https://github.com/Mebus/cupp.git&&pentest_tools&&cd termux-tools
       ;;
-    6) cd&&git clone https://github.com/UltimateHackers/Hash-Buster.git&&pentest_tools&&cd whatandwhy
+    6) cd&&git clone https://github.com/UltimateHackers/Hash-Buster.git&&pentest_tools&&cd termux-tools
       ;;
-    7) cd&&git clone https://github.com/shawarkhanethicalhacker/D-TECT.git&&pentest_tools&&cd whatandwhy
+    7)cd&&https://github.com/bibortone/D-Tech.git&&pkg install python2&&pentest_tools&&cd termux-tools
       ;;
-    8) cd&&git clone https://github.com/m4ll0k/WPSeku.git&&cd WPSeku&&pip install -r requirements.txt&&cd&&pentest_tools&&cd whatandwhy
+    8) cd&&git clone https://github.com/m4ll0k/WPSeku.git&&cd WPSeku&&pip install -r requirements.txt&&cd&&pentest_tools&&cd termux-tools
       ;;
-    9) cd&&git clone https://github.com/UltimateHackers/XSStrike.git&&cd XSStrike&&pip install -r requirements.txt&&cd&&pentest_tools&&cd whatandwhy
+    9) cd&&git clone https://github.com/UltimateHackers/XSStrike.git&&cd XSStrike&&pip install -r requirements.txt&&cd&&pentest_tools&&cd termux-tools
       ;;
-    10) cd&&git clone https://github.com/UndeadSec/SocialFish.git&&cd SocialFish&&pip install -r requirements.txt&&cd&&pentest_tools&&cd whatandwhy
+    10) cd&&git clone https://github.com/UndeadSec/SocialFish.git&&cd SocialFish&&pip install -r requirements.txt&&cd&&pentest_tools&&cd termux-tools
       ;;
-    11) cd&&curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack&&sh httrack&&pentest_tools&&cd whatandwhy
+    11) cd&&curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack&&sh httrack&&pentest_tools&&cd termux-tools
       ;;
-    12) pip2 install whatportis&&pentest_tools&&cd whatandwhy
+    12) pip2 install whatportis&&pentest_tools&&cd termux-tools
       ;;
-    13) pkg insatll hydra -y&&pentest_tools&&cd whatandwhy
+    13) pkg insatll hydra -y&&pentest_tools&&cd termux-tools
       ;;
-    14) pkg install sslscan -y&&pentest_tools&&cd whatandwhy
+    14) pkg install sslscan -y&&pentest_tools&&cd termux-tools
       ;;
-    15) cd&&git clone https://github.com/m4ll0k/WAScan.git&&pip2 install BeautifulSoup&&pentest_tools&&cd whatandwhy
+    15) cd&&git clone https://github.com/m4ll0k/WAScan.git&&pip2 install BeautifulSoup&&pentest_tools&&cd termux-tools
       ;;
     16) cd&&curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo&&chmod +x atilo&&./atilo install kali
       ;;
     17) pkg inatll nmap -y&&pentest_tools
       ;;
-    18) cd&&git clone https://github.com/trustedsec/social-engineer-toolkit/ set/&&pentest_tools&&cd whatandwhy
+    18) cd&&git clone https://github.com/trustedsec/social-engineer-toolkit/ set/&&pentest_tools&&cd termux-tools
       ;;
-    19) cd&&git clone https://github.com/kurobeats/fimap.git&&pentest_tools&&cd whatandwhy
+    19) cd&&git clone https://github.com/kurobeats/fimap.git&&pentest_tools&&cd termux-tools
       ;;
-    20) cd&&git clone https://github.com/sullo/nikto.git&&pentest_tools&&cd whatandwhy
+    20) cd&&git clone https://github.com/sullo/nikto.git&&pentest_tools&&cd termux-tools
       ;;
-    21) cd&&git clone https://github.com/laramies/theHarvester.git&&pentest_tools&&cd whatandwhy
+    21) cd&&git clone https://github.com/laramies/theHarvester.git&&pentest_tools&&cd termux-tools
       ;;
     22) bash all_pentest_tools.sh
       ;;
