@@ -24,7 +24,7 @@ pip install paramiko
 pip install itcat
 
 pkg install curl tsu proot wget vim unzip unrar man p[ython2 -y
-
+ 
 cd&&git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
 cd&&pip2 install requests&&git clone https://github.com/reverse-shell/routersploit
 cd&&git clone https://github.com/Tuhinshubhra/RED_HAWK.git

@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/sh
-# Get some needed tools. coreutils for mkdir command, gnugp for the signing key, and apt-transport-https to actually connect to the repo
+#  Get some needed tools. coreutils for mkdir command, gnugp for the signing key, and apt-transport-https to actually connect to the repo
 apt-get update
 apt-get  --assume-yes upgrade 
 apt-get  --assume-yes install coreutils gnupg wget 

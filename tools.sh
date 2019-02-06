@@ -32,9 +32,9 @@ function English()
 
 function Chinese()
 {
-  interesting="好玩的&装逼 "
+  interesting="玩具"
   hack="渗透测试工具 "
-  change_source="使用清华源 "
+  change_source="apt使用清华源 "
   python_lib="python和python库"
   all="全部 "
   basic_tools="安装最基本的工具 "
