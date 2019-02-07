@@ -179,7 +179,7 @@ function pentest_tools()
   inp
   read srzl
   case $srzl in
-    1) cd&&wget https://Auxilus.github.io/metasploit.sh&&bash metasploit.sh&&pentest_tools&&cd termux-tools
+    1)cd&&pkg install ruby -y&&gem install bundler&&wget https://Auxilus.github.io/metasploit.sh --no-check-certificate&&chmod 777 metasploit.sh&&./metasploit.sh&&pentest_tools&&cd termux-tools
       ;;
     2) pkg install python2 python2-dev -y&&pip2 install --upgrade pip&&pip2 install sqlmap
       ;;
