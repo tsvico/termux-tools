@@ -32,7 +32,7 @@ function English()
 
 function Chinese()
 {
-  interesting="玩具"
+  interesting="好玩的玩具"
   hack="渗透测试工具 "
   change_source="apt使用清华源 "
   python_lib="python和python库"
@@ -50,7 +50,8 @@ function Chinese()
   long_time="注意，安装时间可能非常长"
   thank="感谢使用"
   source_its_pointless="加一个源以安装更多软件"
-  soft_keyboard="使用完整的软键盘(只针对0.66版)"
+  soft_keyboard="使用完整的软键盘(只针对0.66+版)"
+  soft_keyboards="软键盘+编程字符(只针对0.66+版)"
   start
 }
 
@@ -321,9 +322,10 @@ function start()
   echo -e "$color5 [7]$embellish_terminal"
   echo -e "$color4 [8]$vim"
   echo -e "$color3 [9]$soft_keyboard"
-  echo -e "$color2 [10]安装Atilo Linux"
-  echo -e "$color2 [11]管理Atilo Linux"
-  echo -e "$color1 [12]$all"
+  echo -e "$color4 [10]$soft_keyboards"
+  echo -e "$color2 [11]安装Atilo Linux"
+  echo -e "$color2 [12]管理Atilo Linux"
+  echo -e "$color1 [13]$all"
   echo -e "$color1 [66]$q"
   echo -e "$color6 $please_input"
   line
@@ -348,11 +350,13 @@ function start()
       ;;
     9) mkdir -p $HOME/.termux/&&echo "extra-keys = [['ESC','/','-','HOME','UP','END','PGUP'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','PGDN']]" > $HOME/.termux/termux.properties&&message
       ;;
-	10)echo "deb [trusted=yes] https://yadominjinta.github.io/files/ termux    extras" >> $PREFIX/etc/apt/sources.list&&pkg in atilo-cn&&start
+	10) mkdir -p $HOME/.termux/&&echo "extra-keys = [['[',']','{','}','&','<','>'],['ESC','/','-','HOME','UP','END',';'],['TAB','CTRL','~','LEFT','DOWN','RIGHT','\"\"']]" > $HOME/.termux/termux.properties&&message
+      ;;
+	11)echo "deb [trusted=yes] https://yadominjinta.github.io/files/ termux    extras" >> $PREFIX/etc/apt/sources.list&&pkg in atilo-cn&&start
 	  ;;
-	11)apt update&&apt upgrade -y&&clear&&ati
+	12)apt update&&apt upgrade -y&&clear&&ati
 	  ;;
-    12) bash all.sh
+    13) bash all.sh
       ;;
     66) echo "$thank"
       ;;
