@@ -4,10 +4,11 @@
 -------
 食用方法
 ```
-pkg update&&pkg install git -y
-git clone https://github.com/tsvico/termux-tools.git
-cd termux-tools
-bash tools.sh
+pkg update&&pkg install wget -y
+wget https://github.com/tsvico/termux-tools/raw/master/tools
+mv tools $PREFIX/bin/
+chmod 777 $PREFIX/bin/tools
+tools
 ```
 ----
 English
@@ -19,8 +20,9 @@ According to some of my usual modifications and Bug processing, follow-up may ad
 -------
 installation method
 ```
-pkg update&&pkg install git -y
-git clone https://github.com/tsvico/termux-tools.git
-cd termux-tools
-bash tools.sh
+pkg update&&pkg install wget -y
+wget https://github.com/tsvico/termux-tools/raw/master/tools
+mv tools $PREFIX/bin/
+chmod 777 $PREFIX/bin/tools
+tools
 ```

@@ -21,6 +21,7 @@ function English()
   re_input="Please input correct instruction "
   return="Return"
   update_pip="Update pip"
+  gx="Update this script"
   lib="Dependent library"
   ps="The library only for python3，not python2"
   long_time="Ps. the installation time maybe very long"
@@ -34,6 +35,7 @@ function Chinese()
 {
   interesting="好玩的玩具"
   hack="渗透测试工具 "
+  gx="更新这个脚本 "
   change_source="apt使用清华源 "
   python_lib="python和python库"
   all="全部 "
@@ -57,13 +59,22 @@ function Chinese()
 
 function logo()
 {
-  echo -e "$color1          ▀        █  █                          "
-  echo -e "$color2 ▄ ▄▄   ▄▄▄     ▄▄▄█  █ ▄▄    ▄▄▄    ▄▄▄▄   ▄▄▄▄ "
-  echo -e "$color3 █▀  █    █    █▀ ▀█  █▀  █  █▀ ▀█  █▀ ▀█  █▀ ▀█ "
-  echo -e "$color4 █   █    █    █   █  █   █  █   █  █   █  █   █ "
-  echo -e "$color5 █   █  ▄▄█▄▄  ▀█▄██  █   █  ▀█▄█▀  ▀█▄▀█  ▀█▄▀█ "
-  echo -e "$color6                                     ▄  █   ▄  █ "
-  echo -e "$color1                                      ▀▀     ▀▀  "
+  #echo -e "$color1          ▀        █  █                          "
+  #echo -e "$color2 ▄ ▄▄   ▄▄▄     ▄▄▄█  █ ▄▄    ▄▄▄    ▄▄▄▄   ▄▄▄▄ "
+  #echo -e "$color3 █▀  █    █    █▀ ▀█  █▀  █  █▀ ▀█  █▀ ▀█  █▀ ▀█ "
+  #echo -e "$color4 █   █    █    █   █  █   █  █   █  █   █  █   █ "
+  #echo -e "$color5 █   █  ▄▄█▄▄  ▀█▄██  █   █  ▀█▄█▀  ▀█▄▀█  ▀█▄▀█ "
+  #echo -e "$color6                                     ▄  █   ▄  █ "
+  #echo -e "$color1                                      ▀▀     ▀▀  "
+  
+  echo -e "$color1 ████████╗███████╗██╗   ██╗██╗ ██████╗ ██████╗   "
+  echo -e "$color2 ╚══██╔══╝██╔════╝██║   ██║██║██╔════╝██╔═══██╗  "
+  echo -e "$color3    ██║   ███████╗██║   ██║██║██║     ██║   ██║  "
+  echo -e "$color4    ██║   ╚════██║╚██╗ ██╔╝██║██║     ██║   ██║  "
+  echo -e "$color5    ██║   ███████║ ╚████╔╝ ██║╚██████╗╚██████╔╝  "
+  echo -e "$color6    ╚═╝   ╚══════╝  ╚═══╝  ╚═╝ ╚═════╝ ╚═════╝   "
+  echo -e "$color1                                                 "
+
 }
 function line()
 {
@@ -76,13 +87,19 @@ function inp()
 
 function plibs()
 {
-    apt install libxml2 libxml2-dev libxslt libxslt-dev openssl libffi libffi-dev openssl-tool openssl-dev fftw fftw-dev libzmq libzmq-dev freetype freetype-dev libpng libpng-dev pkg-config scrypt -y
-    pkg install libcrypt libcrypt-dev ccrypt libgcrypt libgcrypt-dev-y
-    pkg install python python-dev ndk-sysroot clang make libjpeg-turbo-dev -y
+    apt install freetype freetype-dev libpng libpng-dev pkg-config fftw -y
 }
 function its()
 {
-  bash repo.sh
+   apt-get update
+   apt-get  --assume-yes upgrade 
+   apt-get  --assume-yes install coreutils gnupg wget 
+   mkdir $PREFIX/etc/apt/sources.list.d
+   echo "deb https://its-pointless.github.io/files/ termux extras" > $PREFIX/etc/apt/sources.list.d/pointless.list
+   wget https://its-pointless.github.io/pointless.gpg
+   apt-key add pointless.gpg
+   apt update
+   rm pointless.gpg
 }
 
 function interesting_things()
@@ -142,7 +159,7 @@ function interesting_things()
       ;;
     18) pkg install pv&&interesting_things
       ;;
-    19) cd&&git clone https://github.com/mydzor/bash2048.git&&interesting_things&&cd termux-tools
+    19) cd&&git clone https://github.com/mydzor/bash2048.git&&interesting_things 
       ;;
     20) its&&apt install bastet -y&&interesting_things
       ;;
@@ -172,56 +189,54 @@ function pentest_tools()
   echo -e "$color4[8]WPseku        |[19]fimap"
   echo -e "$color3[9]xsstrike      |[20]nikto"
   echo -e "$color2[10]socialfish   |[21]thehavester"
-  echo -e "$color1[11]httrack      |[22]$all"
+  echo -e "$color1[11]httrack      |"
   echo -e "$color6[66]$return"
   echo "$please_input"
   line
   inp
   read srzl
   case $srzl in
-    1)cd&&pkg install ruby -y&&gem install bundler&&wget https://Auxilus.github.io/metasploit.sh --no-check-certificate&&chmod 777 metasploit.sh&&./metasploit.sh&&pentest_tools&&cd termux-tools
+    1)cd&&pkg install ruby -y&&gem install bundler&&wget https://Auxilus.github.io/metasploit.sh --no-check-certificate&&chmod 777 metasploit.sh&&./metasploit.sh&&pentest_tools 
       ;;
     2) pkg install python2 python2-dev -y&&pip2 install --upgrade pip&&pip2 install sqlmap
       ;;
-    3) cd&&pip2 install requests&&git clone https://github.com/reverse-shell/routersploit&&pentest_tools&&cd termux-tools
+    3) cd&&pip2 install requests&&git clone https://github.com/reverse-shell/routersploit&&pentest_tools 
       ;;
-    4) cd&&git clone https://github.com/Tuhinshubhra/RED_HAWK.git&&pentest_tools&&cd termux-tools
+    4) cd&&git clone https://github.com/Tuhinshubhra/RED_HAWK.git&&pentest_tools 
       ;;
-    5) cd&&git clone https://github.com/Mebus/cupp.git&&pentest_tools&&cd termux-tools
+    5) cd&&git clone https://github.com/Mebus/cupp.git&&pentest_tools 
       ;;
-    6) cd&&git clone https://github.com/UltimateHackers/Hash-Buster.git&&pentest_tools&&cd termux-tools
+    6) cd&&git clone https://github.com/UltimateHackers/Hash-Buster.git&&pentest_tools 
       ;;
-    7)cd&&https://github.com/bibortone/D-Tech.git&&pkg install python2&&pentest_tools&&cd termux-tools
+    7)cd&&https://github.com/bibortone/D-Tech.git&&pkg install python2&&pentest_tools 
       ;;
-    8) cd&&git clone https://github.com/m4ll0k/WPSeku.git&&cd WPSeku&&pip install -r requirements.txt&&cd&&pentest_tools&&cd termux-tools
+    8) cd&&git clone https://github.com/m4ll0k/WPSeku.git&&cd WPSeku&&pip install -r requirements.txt&&cd&&pentest_tools 
       ;;
-    9) cd&&git clone https://github.com/UltimateHackers/XSStrike.git&&cd XSStrike&&pip install -r requirements.txt&&cd&&pentest_tools&&cd termux-tools
+    9) cd&&git clone https://github.com/UltimateHackers/XSStrike.git&&cd XSStrike&&pip install -r requirements.txt&&cd&&pentest_tools 
       ;;
-    10) cd&&git clone https://github.com/UndeadSec/SocialFish.git&&cd SocialFish&&pip install -r requirements.txt&&cd&&pentest_tools&&cd termux-tools
+    10) cd&&git clone https://github.com/UndeadSec/SocialFish.git&&cd SocialFish&&pip install -r requirements.txt&&cd&&pentest_tools 
       ;;
-    11) cd&&curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack&&sh httrack&&pentest_tools&&cd termux-tools
+    11) cd&&curl -LO https://raw.githubusercontent.com/Hax4us/httrack_In_termux/master/httrack&&sh httrack&&pentest_tools 
       ;;
-    12) pip2 install whatportis&&pentest_tools&&cd termux-tools
+    12) pip2 install whatportis&&pentest_tools 
       ;;
-    13) pkg insatll hydra -y&&pentest_tools&&cd termux-tools
+    13) pkg insatll hydra -y&&pentest_tools 
       ;;
-    14) pkg install sslscan -y&&pentest_tools&&cd termux-tools
+    14) pkg install sslscan -y&&pentest_tools 
       ;;
-    15) cd&&git clone https://github.com/m4ll0k/WAScan.git&&pip2 install BeautifulSoup&&pentest_tools&&cd termux-tools
+    15) cd&&git clone https://github.com/m4ll0k/WAScan.git&&pip2 install BeautifulSoup&&pentest_tools 
       ;;
     16) cd&&curl https://raw.githubusercontent.com/YadominJinta/atilo/master/atilo -o ~/atilo&&chmod +x atilo&&./atilo install kali
       ;;
     17) pkg inatll nmap -y&&pentest_tools
       ;;
-    18) cd&&git clone https://github.com/trustedsec/social-engineer-toolkit/ set/&&pentest_tools&&cd termux-tools
+    18) cd&&git clone https://github.com/trustedsec/social-engineer-toolkit/ set/&&pentest_tools 
       ;;
-    19) cd&&git clone https://github.com/kurobeats/fimap.git&&pentest_tools&&cd termux-tools
+    19) cd&&git clone https://github.com/kurobeats/fimap.git&&pentest_tools 
       ;;
-    20) cd&&git clone https://github.com/sullo/nikto.git&&pentest_tools&&cd termux-tools
+    20) cd&&git clone https://github.com/sullo/nikto.git&&pentest_tools 
       ;;
-    21) cd&&git clone https://github.com/laramies/theHarvester.git&&pentest_tools&&cd termux-tools
-      ;;
-    22) bash all_pentest_tools.sh
+    21) cd&&git clone https://github.com/laramies/theHarvester.git&&pentest_tools 
       ;;
     66) start
       ;;
@@ -313,7 +328,7 @@ function start()
 {
   logo
   line
-  echo -e "$color1 [1]$basic_tools"
+  echo -e "$color1 [1]$gx"
   echo -e "$color2 [2]$interesting"
   echo -e "$color3 [3]$hack"
   echo -e "$color4 [4]$python_lib"
@@ -332,7 +347,7 @@ function start()
   inp
   read choice
   case $choice in
-    1) pkg install curl tsu proot wget vim unzip unrar man -y&&start
+    1) rm -rf $PREFIX/bin/tool&&wget https://github.com/tsvico/termux-tool/raw/master/tools&&mv tools $PREFIX/bin/&&chmod 777 $PREFIX/bin/tools&&tools
       ;;
     2) interesting_things
       ;;
@@ -413,6 +428,7 @@ function ati()
 choosepeo()
 {
   apt upgrade -y
+  pkg install curl wget vim unzip man git -y
   clear
   echo "[1]I know English"
   echo "[2]我懂中文"
