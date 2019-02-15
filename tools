@@ -347,7 +347,7 @@ function start()
   inp
   read choice
   case $choice in
-    1) rm -rf $PREFIX/bin/tool&&wget https://github.com/tsvico/termux-tool/raw/master/tools&&mv tools $PREFIX/bin/&&chmod 777 $PREFIX/bin/tools&&tools
+    1) rm -rf $PREFIX/bin/tool&&wget https://github.com/tsvico/termux-tools/raw/master/tools&&mv tools $PREFIX/bin/&&chmod 777 $PREFIX/bin/tools&&tools
       ;;
     2) interesting_things
       ;;
