@@ -341,6 +341,7 @@ function start()
   echo -e "$color2 [11]安装Atilo Linux"
   echo -e "$color2 [12]管理Atilo Linux"
   echo -e "$color1 [13]$all"
+  echo -e "$color3 [14]安装BiliHelper"
   echo -e "$color1 [66]$q"
   echo -e "$color6 $please_input"
   line
@@ -373,6 +374,13 @@ function start()
 	  ;;
     13) bash all.sh
       ;;
+    14) https://github.com/lkeme/BiliHelper&&cd BiliHelper/conf
+        cp user.conf.example user.conf
+        apt install php
+        cd ~ && curl -sS https://getcomposer.org/installer | php
+        cp composer.phar BiliHelper
+        cd BiliHelper && php composer.phar install
+    ;;
     66) echo "$thank"
       ;;
     *) echo "$re_input"&&start
