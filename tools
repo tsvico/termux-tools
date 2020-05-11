@@ -6,36 +6,11 @@ color4="\e[0;34;40m"
 color5="\e[0;35;40m"
 color6="\e[0;37;40m"
 
-function English()
-{
-  interesting="Interesting things "
-  hack="Penetration test tools "
-  change_source="Use Tsinghua source "
-  python_lib="Python and three part library "
-  all="All in one "
-  basic_tools="Install basic tools "
-  embellish_terminal="Embellish terminal "
-  vim="Deploy vim as an IDE "
-  q="Quit "
-  please_input="Please enter the corresponding instruction "
-  re_input="Please input correct instruction "
-  return="Return"
-  update_pip="Update pip"
-  gx="Update this script"
-  lib="Dependent library"
-  ps="The library only for python3，not python2"
-  long_time="Ps. the installation time maybe very long"
-  thank="Thank for using"
-  source_its_pointless="Add a source to install more software"
-  soft_keyboard="Enable complete soft keyboard(only for termux0.66)"
-  start
-}
-
 function Chinese()
 {
   interesting="好玩的玩具"
   hack="渗透测试工具 "
-  gx="更新这个脚本 "
+  gx="更新这个脚本(安装到termux，可用tool直接打开) "
   change_source="apt使用清华源 "
   python_lib="python和python库"
   all="全部 "
@@ -58,15 +33,7 @@ function Chinese()
 }
 
 function logo()
-{
-  #echo -e "$color1          ▀        █  █                          "
-  #echo -e "$color2 ▄ ▄▄   ▄▄▄     ▄▄▄█  █ ▄▄    ▄▄▄    ▄▄▄▄   ▄▄▄▄ "
-  #echo -e "$color3 █▀  █    █    █▀ ▀█  █▀  █  █▀ ▀█  █▀ ▀█  █▀ ▀█ "
-  #echo -e "$color4 █   █    █    █   █  █   █  █   █  █   █  █   █ "
-  #echo -e "$color5 █   █  ▄▄█▄▄  ▀█▄██  █   █  ▀█▄█▀  ▀█▄▀█  ▀█▄▀█ "
-  #echo -e "$color6                                     ▄  █   ▄  █ "
-  #echo -e "$color1                                      ▀▀     ▀▀  "
-  
+{ 
   echo -e "$color1 ████████╗███████╗██╗   ██╗██╗ ██████╗ ██████╗   "
   echo -e "$color2 ╚══██╔══╝██╔════╝██║   ██║██║██╔════╝██╔═══██╗  "
   echo -e "$color3    ██║   ███████╗██║   ██║██║██║     ██║   ██║  "
@@ -338,10 +305,9 @@ function start()
   echo -e "$color4 [8]$vim"
   echo -e "$color3 [9]$soft_keyboard"
   echo -e "$color4 [10]$soft_keyboards"
-  echo -e "$color2 [11]安装Atilo Linux"
-  echo -e "$color2 [12]管理Atilo Linux"
-  echo -e "$color1 [13]$all"
-  echo -e "$color3 [14]安装BiliHelper"
+  echo -e "$color3 [11]安装Linux子系统"
+  echo -e "$color2 [12]安装adb"
+  echo -e "$color1 [13]sshd"
   echo -e "$color1 [66]$q"
   echo -e "$color6 $please_input"
   line
@@ -368,19 +334,12 @@ function start()
       ;;
 	10) mkdir -p $HOME/.termux/&&echo "extra-keys = [['[',']','{','}','&','<','>'],['ESC','/','-','HOME','UP','END',';'],['TAB','CTRL','~','LEFT','DOWN','RIGHT','\"\"']]" > $HOME/.termux/termux.properties&&message
       ;;
-	11)echo "deb [trusted=yes] https://yadominjinta.github.io/files/ termux    extras" >> $PREFIX/etc/apt/sources.list&&pkg in atilo-cn&&start
+	11)bash -c "$(curl -L gitee.com/mo2/linux/raw/master/debian.sh)"
 	  ;;
-	12)apt update&&apt upgrade -y&&clear&&ati
+	12) git clone --depth=1 git://github.com/Magisk-Modules-Repo/adb-ndk.git ~/adb-ndk && cd ~/adb-ndk/bin/ && mv -f adb.bin adb && chmod +x ./* && mv -f ./* $PREFIX/bin/ && rm -rf ~/adb-ndk/ && start
 	  ;;
-    13) bash all.sh
-      ;;
-    14) https://github.com/lkeme/BiliHelper&&cd BiliHelper/conf
-        cp user.conf.example user.conf
-        apt install php
-        cd ~ && curl -sS https://getcomposer.org/installer | php
-        cp composer.phar BiliHelper
-        cd BiliHelper && php composer.phar install
-    ;;
+	13) pkg install openssh && echo "输入连接密码，如果想使用秘钥去可以网上查找教程"&& passwd && sshd && echo "连接用户名为\n" && whoami && echo "端口8022,连接地址为(需连接wifi)" && ifconfig "wlan0" | grep "inet" | awk '{ print $2}'
+	  ;;
     66) echo "$thank"
       ;;
     *) echo "$re_input"&&start
@@ -435,20 +394,10 @@ function ati()
 }
 choosepeo()
 {
+  apt update
   apt upgrade -y
   pkg install curl wget vim unzip man git -y
   clear
-  echo "[1]I know English"
-  echo "[2]我懂中文"
-  inp
-  read peo 
-  case $peo in
-    1) English
-      ;;
-    2) Chinese
-      ;;
-    *) echo "please input 1 or 2"&&echo "请输入1或2"&&choosepeo 
-      ;;
-  esac
+  Chinese
 }
 choosepeo
